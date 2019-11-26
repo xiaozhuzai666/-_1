@@ -6,13 +6,13 @@ import re
 operators = ('+','-','*','/')
 def button(btn):
     content = contentshow.get()
-    if content.startwith('.'):
+    if content.startswith('.'):
         content = '0'+ content
 
     if btn in '1234567890':
         content += btn
     elif btn=='.':
-        lastpart = re.split(r'\+|-|\|*/',content)[-1]
+        lastpart = re.split(r'\+|-|\|*/',content)[-1]#正则运算法则
         if '.' in lastpart:
             tkinter.messagebox.showerror('error','Repating decimal point')
             return
@@ -52,7 +52,7 @@ contenttext.place(x=10,y=10,width=280,height=20)
 
 #放按钮
 btnclear = tkinter.Button(main,text='clear',bg='blue',command=lambda:button('clear'))
-btnclear.place(x=170,y=40,width=80,height=20)
+btnclear.place(x=230,y=210,width=50,height=30)
 number = list('1234567890.=')
 index=0
 for row in range(4):
