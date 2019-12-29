@@ -1,6 +1,5 @@
 import pygame
 from pygame.sprite import Sprite
-from ship import Ship
 
 class Alien(Sprite):
     """表示单个外星人的类"""
@@ -33,12 +32,6 @@ class Alien(Sprite):
             return True
         elif self.rect.left <= 0:
             return True
-
-
-    def check_ship_crash(self,ship):
-        """如果外星人碰到了飞船，就停止运行"""
-
-
 
     def update(self):
         """向左或向右移动外星人"""

@@ -20,3 +20,5 @@ class Settings():
         self.fleet_drop_speed = 10
         # fleet_direction为1为右移
         self.fleet_direction = 1
+        #数据的统计
+        self.ship_limit = 3
